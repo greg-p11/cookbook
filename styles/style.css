@@ -1,0 +1,74 @@
+body {
+  background-color: bisque;
+}
+
+.blackWindow {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.addWindow {
+  height: 80vh;
+  width: 80vw;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  background-color: snow;
+}
+
+#ingredConteiner .ingredient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#ingredConteiner p {
+  margin: 0px;
+}
+
+.card {
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.cardContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.firstContent {
+  width: 30%;
+}
+
+.secondContent {
+  width: 70%;
+}
+
+.recipe {
+  z-index: 10;
+}
+
+#checkedbox {
+  display: none;
+}
+
+#checkedbox:checked + .blank {
+  display: none;
+}
+
+.blank {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+/*# sourceMappingURL=style.css.map */
