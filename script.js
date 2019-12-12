@@ -25,7 +25,7 @@ var ingreds =[];
 
 $("#btnIngred").click(function(){
     var ingredient = $("#ingredients").val();
-    //ingreds.push(ingredient);
+    
     $("#ingredConteiner").append("<div class='ingredient'><p class='ingred'>"+ingredient+"</p>"+"<button class='deleteIngred' type='button'>Usuń</button></div>");    
     
     $(".deleteIngred").click(function(){
@@ -56,22 +56,21 @@ $("#saveRecipe").click(function(){
     ingreds = [];
     clearVal(); 
     $(function(){
-        var j=0;
-        $("#catalog").append("<div id='recipe"+id+"' class='card'>"+
-"<label  class='recipe'>"+
-"<input type='checkbox' id='checkedbox' checked=''>"+
-"<div class='blank'></div>"+
-                        "<div class='cardContent'>"+
-                            "<div class='card-header firstContent'>"+type+"</div>"+
-                            "<div class='card-header secondContent'>"+name+"</div>"+
-                        "</div>"+
-                        "<div class='cardContent'>"+
-                            "<div class='card-body firstContent'>Składniki:<br>"+ingredients+"</div>"+
-                            "<div class='card-body secondContent'>"+description+"</div>"+
-                        "</div>"+
-                        "</label>"+
-                    "</div>")
-    
+        //var j=0;
+        $("#catalog").append("<div  class='card'>"+
+                                "<label>"+
+                                    "<input type='checkbox' class='checkedbox' checked=''>"+
+                                    "<div class='blank'></div>"+
+                                "<div class='cardContent'>"+
+                                    "<div class='card-header firstContent'>"+type+"</div>"+
+                                    "<div class='card-header secondContent'>"+name+"</div>"+
+                                "</div>"+
+                                "<div class='cardContent'>"+
+                                    "<div class='card-body firstContent'>Składniki:<br>"+ingredients+"</div>"+
+                                    "<div class='card-body secondContent'>"+description+"</div>"+
+                                "</div>"+
+                                "</label>"+
+                            "</div>")
     });
     
 });
@@ -88,7 +87,3 @@ const clearVal =() =>{
 };
 
 
-if(recipies.length>0)
-{$("#recipe"+id).click(function() {
-    alert("aaa");
-});}

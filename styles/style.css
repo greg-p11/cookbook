@@ -12,7 +12,7 @@ body {
   z-index: 10;
 }
 
-.addWindow {
+.blackWindow .addWindow {
   height: 80vh;
   width: 80vw;
   margin-top: 10vh;
@@ -31,9 +31,13 @@ body {
 }
 
 .card {
-  width: 100%;
+  width: 100vw;
   margin-top: 10px;
+}
+
+.card label {
   cursor: pointer;
+  margin: 0px;
 }
 
 .cardContent {
@@ -42,23 +46,19 @@ body {
   display: flex;
 }
 
-.firstContent {
-  width: 30%;
+.cardContent .firstContent {
+  width: 30vw;
 }
 
-.secondContent {
-  width: 70%;
+.cardContent .secondContent {
+  width: 70vw;
 }
 
-.recipe {
-  z-index: 10;
-}
-
-#checkedbox {
+.checkedbox {
   display: none;
 }
 
-#checkedbox:checked + .blank {
+.checkedbox:checked + .blank {
   display: none;
 }
 
@@ -69,6 +69,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 10;
 }
 /*# sourceMappingURL=style.css.map */

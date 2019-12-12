@@ -10,15 +10,15 @@ body{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);  
     z-index: 10;
+    .addWindow{
+        height: 80vh;
+        width: 80vw;
+        margin-top: 10vh;
+        margin-left: 10vw;
+        background-color: snow;     
+    }
 }
-.addWindow{
-    height: 80vh;
-    width: 80vw;
-    margin-top: 10vh;
-    margin-left: 10vw;
-    background-color: snow;
-   
-}
+
 #ingredConteiner{
     
     .ingredient{
@@ -29,40 +29,37 @@ body{
     }
 }
 .card{
-    width: 100%;
+    width: 100vw;
     margin-top: 10px;
-    cursor: pointer;
+    label{     
+        cursor: pointer;
+        margin:0px;
+    } 
 }
 
 .cardContent{
     display:flex;
+    .firstContent{
+        width:30vw;
+    }
+    .secondContent{
+        width:70vw;
+    }
 }
 
-.firstContent{
-    width:30%;
-}
-.secondContent{
-    width:70%;
-}
 
-.recipe{
-    z-index:10;
-}
-#checkedbox{
+.checkedbox{
     display: none;
+    &:checked + .blank{
+        display: none;
+    } 
 }
-#checkedbox:checked + .blank{
-
-    display: none;
-}
-
-.blank{
-    
+.blank{  
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);  
     position: fixed; 
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 10;
 }
