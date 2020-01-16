@@ -15,9 +15,13 @@ body{
         width: 80vw;
         margin-top: 10vh;
         margin-left: 10vw;
-        background-color: snow;     
+        background-color: snow;    
+        overflow-y:scroll; 
     }
 }
+
+
+
 
 #ingredConteiner{
     
@@ -31,10 +35,8 @@ body{
 .card{
     width: 100vw;
     margin-top: 10px;
-    label{     
-        cursor: pointer;
-        margin:0px;
-    } 
+    cursor: pointer;
+     
 }
 
 .cardContent{

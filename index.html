@@ -23,41 +23,23 @@
                 <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#mainmenu"><span class="navbar-toggler-icon"></span></button>
                 <div class="navbar-collapse collapse " id="mainmenu">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item "><a href="#" class="nav-link">Szukaj po nazwie</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Szukaj po składnikach</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Szukaj po typie</a></li>
-                        <li class="nav-item"><button id="addRecipe" class="nav-link">Dodaj przepis</button</li>
+                        <li class="nav-item"><button id="btnInfo" class="nav-link">Informację o stronie</button></li>
+                        <li class="nav-item"><button id="btnSearchRecipe" class="nav-link">Szukaj przepisu</button></li>
+                        <li class="nav-item"><button id="addRecipe" class="nav-link">Dodaj przepis</button></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
             <div class="container">
+                <div  class="row" id="searchMenu" hidden="true">                 
+                    <div class="col-sm-12">Szukaj przepisu</div>
+                    <div class="col-sm-4"><button id="btnSearchName">Nazwa</button></div>
+                    <div class="col-sm-4"><button id="btnSearchType">Typ</button></div>
+                    <div class="col-sm-4"><button id="btnSearchIngredients">Składniki</button></div>
+                    <div class="col-sm-12" id="textToSearch"></div>   
+                </div>
                 <div class="row" id="catalog">
-
-                    <div class="card">
-                        <label class="recipe">
-                                <input type="checkbox" class="checkedbox" checked="">
-                                <div class="blank"></div>
-                        <div class="cardContent">
-                            <div class="card-header firstContent">
-                                            Quote
-                            </div>
-                            <div class="card-header secondContent">
-                                                  Quote
-                            </div>
-                        </div>
-                            
-                        <div class="cardContent">
-                            <div class="card-body firstContent">
-                                                Quote
-                            </div>
-                            <div class="card-body secondContent">
-                                                      Quote
-                            </div>
-                        </label>
-                        </div>
-                    </div>
                 </div>
             </div>
         </main>
@@ -65,7 +47,7 @@
         
 
 
-        <div class="blackWindow" hidden="true">
+        <div id="recipeAdding" class="blackWindow" hidden="true">
             <div class="addWindow">
                 <div class="container-fluid">
                     <div class="row">
@@ -81,8 +63,12 @@
                             <input id="type" type="text" name="type"/>
                         </div>
                         <div class="col-12">
-                            <label for="desc">Opis</label>
-                            <input id="desc" type="text" name="desc"/>
+                            <label for="desc">Krótki opis</label>
+                            <textarea id="desc" rows = "3" cols = "20" maxlength="50" name = "desc" style="resize: none;"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="link">Link do przepisu</label>
+                            <input id="recipeLink" type="text" name="link"/>
                         </div>
                         <div class="col-12">
                             <label for="text">Sposób przygotowania</label>
@@ -95,9 +81,41 @@
                         </div>   
                         <div id="ingredConteiner" class="col-12">
                         </div>  
-                        <div class="col-12">
+                        <div  class="col-12">
                             <button type="button" id="saveRecipe">Dodaj Przepis</button>
-                            <button type="button" id="cancel">Anuluj</button>
+                            <button type="button" id="saveEdit">Zapisz Zmiany</button>
+                            <button type="button" id="cancel" class="cancel">Anuluj</button>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="recipeInformation" class="blackWindow" hidden="true">
+            <div class="addWindow">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 mt-3">
+                            <div id="nameOfRecipe"></div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div id="typeOfRecipe"></div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div ><a id="linkToRecipe">Link do przepisu</a></div>
+                        </div>   
+                        <div class="col-sm-3">
+                            <div id="ingrediantsOfRecipe"></div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div id="textOfRecipe"></div>
+                        </div>
+                        <div class="col-sm-12">
+                            <button type="button" id="editRecipe">Edytuj</button>
+                            <button type="button" id="deleteRecipe">Usuń</button>
+                            <button type="button" id="back" class="cancel">Cofnij</button>
+                            
                         </div>     
                     </div>
                 </div>
