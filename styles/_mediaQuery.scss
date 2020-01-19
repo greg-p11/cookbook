@@ -1,0 +1,47 @@
+
+@media screen and (max-width: 767px) {
+    .windowInfo {
+      font-size: 15px !important;
+    }
+    .card{
+        font-size: 13px;
+        .cardTitle{
+            font-size: 16px !important;
+        }
+    }
+    .addWindow{
+        font-size: 13px;
+    }
+    .recipeTitle{
+        font-size: 30px !important;
+    }
+    .litleTitle{
+        font-size: 20px !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .windowInfo {
+        font-size: 12px !important;
+      }
+    .card{
+        font-size: 10px;
+        .cardTitle{
+            font-size: 13px !important;
+        }
+    }
+    .addWindow{
+        font-size: 10px;
+    }
+    #whatToSearch{
+        width:90%;
+    }
+    #btnAddSearchIng{
+        width:90% !important;
+    }
+    .recipeTitle{
+        font-size: 25px !important;
+    }
+    .litleTitle{
+        font-size: 17px !important;
+    }
+}

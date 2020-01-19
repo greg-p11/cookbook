@@ -31,9 +31,6 @@
                     </ul>
                 </div>
             </nav>
-        </header>
-        <main>
-            
             <div  class="row" id="searchMenu" hidden="true">             
                 <div class="col-sm-12 "> <hr> <b>Szukaj przepisu</b> </div>
                 <div class="col-sm-4 mt-2"><button id="btnSearchName">Nazwa</button></div>
@@ -41,14 +38,16 @@
                 <div class="col-sm-4 mt-2"><button id="btnSearchIngredients">Składniki</button></div>
                 <div class="col-sm-12 mt-3" id="textToSearch"></div>   
             </div>
+        </header>
+        <main>  
             <div class="container">
                 <div class="row" id="catalog"></div>
             </div>
         </main>
 
         
-        <div class="blank" hidden="true">
-            <div class="windowInfo">Strona pozwala na stworzenie własnej książki kucharskiej.<br>Dodane przepisy w każdej chwili można edytować oraz usuwać.<br>W razie potrzeby istnieje możliwość wyszukiwania po nazwie, kategorii lub składnikach.<br> Wszystkie informacje zapisywane są w pamięci przeglądarki.</div>
+        <div class="blackWindow blank" hidden="true">
+            <div class="windowInfo ">Strona pozwala na stworzenie własnej książki kucharskiej.<br>Dodane przepisy można edytować oraz usuwać.<br>W razie potrzeby istnieje możliwość wyszukania przepisu po nazwie, kategorii lub składnikach.<br> Wszystkie informacje zapisywane są w lokalnej pamięci przeglądarki.</div>
         </div>
 
         <div id="recipeAdding" class="blackWindow" hidden="true">
@@ -92,12 +91,10 @@
             </div>
         </div>
 
-
         <div id="recipeInformation" class="blackWindow" hidden="true">
             <div class="addWindow">
                 <div class="container-fluid">
                     <div class="row">
-
                         <div class="col-sm-12 mt-3">
                             <div id="nameOfRecipe" class="recipeTitle underline"></div>
                         </div>
@@ -120,9 +117,7 @@
                         
                         <div class="col-sm-4"><button type="button" id="editRecipe" class=" mt-2 mb-3">Edytuj</button></div>
                         <div class="col-sm-4"><button type="button" id="deleteRecipe" class="btnDelete mt-2 mb-3">Usuń</button></div>
-                        <div class="col-sm-4"><button type="button" id="back" class="btnAccept cancel mt-2 mb-3">Cofnij</button></div>
-                            
-                            
+                        <div class="col-sm-4"><button type="button" id="back" class="btnAccept cancel mt-2 mb-3">Cofnij</button></div>    
                     </div>
                 </div>
             </div>
@@ -130,6 +125,5 @@
 
     </body>
     <script src="script.js"></script>
-    <!-- <script src="searchFunction.js"></script>
-    <script src="windowWithRecipe.js"></script> -->
+    <script src="searchFx.js"></script>
 </html>
