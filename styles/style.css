@@ -34,7 +34,6 @@
   }
   #whatToSearch {
     width: 90%;
-    border-radius: 10px 10px 10px 10px !important;
   }
   #btnAddSearchIng {
     width: 90% !important;
@@ -44,9 +43,6 @@
   }
   .litleTitle {
     font-size: 17px !important;
-  }
-  #btnAddSearchIng {
-    border-radius: 10px 10px 10px 10px !important;
   }
 }
 
@@ -304,15 +300,11 @@
   background-color: rgba(168, 141, 106, 0.6);
 }
 
-#searchMenu #btnAddSearchIng {
-  border-radius: 0 10px 10px 0;
-}
-
 #searchMenu input {
   margin-bottom: 8px;
   background-color: #fff7ee;
   border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 10px 10px 10px;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 }
