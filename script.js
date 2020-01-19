@@ -95,7 +95,8 @@ $("#saveRecipe").click(function(){
 //-----------------------------------------------------------------------------------------------
 //function to open window with recipe
 
-$(document).on('click', '.openRecipe', function(e){
+// $(document).on('click', '.openRecipe', function(e){
+$(document).on('click touchstart', '.openRecipe', function(e) {
     e.preventDefault();
     var recipeId = $(this).attr("recipe-id"); 
     let u=0; 
@@ -203,7 +204,7 @@ $("#addRecipe").click(function(){
 //function to creating cards
 const cardCreate = (id, type, name, ingredients, description) =>{
     $("#catalog").append(
-        "<div id='"+id+"'  class='card openRecipe "+id+"' recipe-id='"+id+"'>"+
+        "<div id='"+id+"'  class='card openRecipe' recipe-id='"+id+"'>"+
         "<div class='cardContent'>"+
             "<div id='type"+id+"' class='card-header firstContent addCategory '>"+type+"</div>"+
             "<div id='name"+id+"' class='card-header secondContent cardTitle'>"+name+"</div>"+
