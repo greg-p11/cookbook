@@ -1,5 +1,83 @@
-body {
-  background-color: bisque;
+@media screen and (max-width: 767px) {
+  .windowInfo {
+    font-size: 15px !important;
+  }
+  .card {
+    font-size: 13px;
+  }
+  .card .cardTitle {
+    font-size: 16px !important;
+  }
+  .addWindow {
+    font-size: 13px;
+  }
+  .recipeTitle {
+    font-size: 30px !important;
+  }
+  .litleTitle {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .windowInfo {
+    font-size: 12px !important;
+  }
+  .card {
+    font-size: 10px;
+  }
+  .card .cardTitle {
+    font-size: 13px !important;
+  }
+  .addWindow {
+    font-size: 10px;
+  }
+  #whatToSearch {
+    width: 90%;
+  }
+  #btnAddSearchIng {
+    width: 90% !important;
+  }
+  .recipeTitle {
+    font-size: 25px !important;
+  }
+  .litleTitle {
+    font-size: 17px !important;
+  }
+}
+
+#mainmenu a:hover {
+  background-color: #f0ebd4;
+  border-radius: 20px;
+}
+
+#mainmenu a:active {
+  opacity: 0.5;
+}
+
+.windowInfo {
+  padding: 20px;
+  height: 60vh;
+  width: 60vw;
+  background-color: #f0ebd4;
+  font-size: 2vw;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  top: 20vh;
+  left: 20vw;
+  border-radius: 125px 125px 125px 125px;
+  border: 3px solid snow;
+  -webkit-box-shadow: 25px 25px 25px -25px snow;
+  box-shadow: 25px 25px 25px -25px snow;
 }
 
 .blackWindow {
@@ -17,8 +95,117 @@ body {
   width: 80vw;
   margin-top: 10vh;
   margin-left: 10vw;
-  background-color: snow;
+  background-color: #f0ebd4;
   overflow-y: scroll;
+  -webkit-box-shadow: 25px 25px 25px -25px snow;
+  box-shadow: 25px 25px 25px -25px snow;
+  border-radius: 25px 0 0 25px;
+  border-left: 3px solid snow;
+  border-top: 3px solid snow;
+}
+
+.blackWindow .addWindow .recipeTitle {
+  font-size: 38px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.blackWindow .addWindow .litleTitle {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.blackWindow .addWindow input {
+  width: 100%;
+  background-color: #fff7ee;
+}
+
+.blackWindow .addWindow textarea {
+  width: 100%;
+  background-color: #fff7ee;
+}
+
+.blackWindow .addWindow button {
+  border: none;
+  width: 100%;
+  border-radius: 20px;
+  outline: 0;
+}
+
+.blackWindow .addWindow .ingredient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2px;
+}
+
+.blackWindow .addWindow .deleteIngred {
+  height: 30px;
+  background-color: rgba(207, 60, 72, 0.705);
+  width: 50%;
+}
+
+.blackWindow .addWindow .deleteIngred:hover {
+  background-color: #cf3c48;
+}
+
+.blackWindow .addWindow .deleteIngred:active {
+  background-color: rgba(207, 60, 72, 0.5);
+}
+
+.blackWindow .addWindow #btnIngred {
+  height: 30px;
+  background-color: rgba(60, 136, 207, 0.705);
+}
+
+.blackWindow .addWindow #btnIngred:hover {
+  background-color: #3c88cf;
+}
+
+.blackWindow .addWindow #btnIngred:active {
+  background-color: rgba(60, 136, 207, 0.5);
+}
+
+.blackWindow .addWindow .btnAccept {
+  height: 40px;
+  background-color: rgba(60, 207, 60, 0.705);
+}
+
+.blackWindow .addWindow .btnAccept:hover {
+  background-color: #3ccf3c;
+}
+
+.blackWindow .addWindow .btnAccept:active {
+  background-color: rgba(60, 207, 60, 0.5);
+}
+
+.blackWindow .addWindow .btnDelete {
+  height: 40px;
+  background-color: rgba(228, 49, 49, 0.705);
+}
+
+.blackWindow .addWindow .btnDelete:hover {
+  background-color: #e43131;
+}
+
+.blackWindow .addWindow .btnDelete:active {
+  background-color: rgba(228, 49, 49, 0.5);
+}
+
+.blackWindow .addWindow #editRecipe {
+  height: 40px;
+  background-color: rgba(60, 136, 207, 0.705);
+}
+
+.blackWindow .addWindow #editRecipe:hover {
+  background-color: #3c88cf;
+}
+
+.blackWindow .addWindow #editRecipe:active {
+  background-color: rgba(60, 136, 207, 0.5);
 }
 
 #ingredConteiner .ingredient {
@@ -32,40 +219,123 @@ body {
 }
 
 .card {
+  border-radius: 20px 20px 0 20px;
+  -webkit-box-shadow: 25px 25px 25px -25px rgba(0, 0, 0, 0.56);
+  box-shadow: 25px 25px 25px -25px rgba(0, 0, 0, 0.56);
   width: 100vw;
-  margin-top: 10px;
+  margin-top: 20px;
   cursor: pointer;
 }
 
-.cardContent {
+.card:hover {
+  -webkit-box-shadow: 0px 1px 10px 10px rgba(255, 255, 255, 0.96);
+  box-shadow: 0px 1px 10px 10px rgba(255, 255, 255, 0.96);
+}
+
+.card .cardContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cardContent .firstContent {
-  width: 30vw;
+.card .cardContent .firstContent {
+  min-width: 40%;
+  max-width: 40%;
+  border-left: 2px solid rgba(0, 0, 0, 0.5);
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-.cardContent .secondContent {
-  width: 70vw;
+.card .cardContent .secondContent {
+  min-width: 60%;
+  max-width: 60%;
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-.checkedbox {
-  display: none;
+.card .cardContent .cardTitle {
+  font-weight: bolder;
+  font-size: 18px;
+  background-color: rgba(168, 141, 106, 0.7);
+  border-radius: 0 20px  0 0;
 }
 
-.checkedbox:checked + .blank {
-  display: none;
+.card .cardContent .addCategory {
+  background-color: rgba(168, 141, 106, 0.6);
+  border-radius: 20px 0 0 0;
 }
 
-.blank {
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
+.card .cardContent .addDescription {
+  background-color: rgba(231, 235, 212, 0.7);
+}
+
+.card .cardContent .addIngrid {
+  border-radius: 0 0 0 20px;
+  background-color: rgba(240, 235, 212, 0.9);
+}
+
+#searchMenu {
+  background-color: #f8f9fa;
+  text-align: center;
+  margin: 0px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#searchMenu button {
+  color: rgba(0, 0, 0, 0.5);
+  outline: 0;
+  width: 90%;
+  height: 30px;
+  background-color: #f0ebd4;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+#searchMenu button:hover {
+  background-color: rgba(168, 141, 106, 0.7);
+}
+
+#searchMenu button:active {
+  background-color: rgba(168, 141, 106, 0.6);
+}
+
+#searchMenu input {
+  margin-bottom: 8px;
+  background-color: #fff7ee;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+#searchMenu #btnAddSearchIng {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 226px;
+  height: 30px;
+}
+
+.addCategory::before {
+  content: "Kategoria: ";
+}
+
+.addDescription::before {
+  content: "Opis: ";
+}
+
+body {
+  background-color: rgba(172, 170, 170, 0.568);
+  font-family: cursive;
+  font-size: 16px;
+  color: #525252;
+}
+
+.underline {
+  border-bottom: 2px solid rgba(102, 90, 90, 0.712);
+}
+
+.unpperline {
+  border-top: 2px solid rgba(102, 90, 90, 0.712);
+}
+
+.centerText {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

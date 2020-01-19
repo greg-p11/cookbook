@@ -1,0 +1,206 @@
+
+.blackWindow{
+    position: fixed;
+    left:0px;
+    top:0px;
+    width:100vw;
+    height: 100vh;
+    background-color: $backgroundColorWindow;  
+    z-index: 10;
+    .addWindow{
+        height: 80vh;
+        width: 80vw;
+        margin-top: 10vh;
+        margin-left: 10vw;
+        background-color: $colorWindow;
+        overflow-y:scroll; 
+        -webkit-box-shadow: 25px 25px 25px -25px snow;
+        -moz-box-shadow: 25px 25px 25px -25px snow;
+        box-shadow: 25px 25px 25px -25px snow;
+
+        border-radius: 25px 0 0 25px;
+        border-left: 3px solid snow;  
+        border-top: 3px solid snow; 
+         
+    .recipeTitle{
+        font-size: 38px;
+        text-align: center;
+        font-weight: bolder;
+    }
+    .litleTitle{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+    input{
+        width:100%;
+        background-color: rgb(255, 247, 238);
+    }
+    textarea{
+        width:100%;
+        background-color: rgb(255, 247, 238);
+    }
+    button{
+        border: none;
+        width:100%;  
+        border-radius: 20px;
+        outline:0;
+    }
+    .ingredient{
+        display: flex;
+        justify-content: space-between;
+        margin-top:2px;
+    }
+    .deleteIngred{
+        height: 30px;
+        background-color: rgba(207, 60, 72, 0.705);
+        width: 50%;
+        &:hover{
+            background-color:  rgba(207, 60, 72, 1);
+        }
+        &:active{
+            background-color:  rgba(207, 60, 72, 0.5);
+        }
+    }
+    #btnIngred{
+        height: 30px;
+        background-color: rgba(60, 136, 207, 0.705);
+        &:hover{
+            background-color:  rgba(60, 136, 207, 1);
+        }
+        &:active{
+            background-color:  rgba(60, 136, 207, 0.5);
+        }
+    }
+    .btnAccept{
+        height: 40px;
+        background-color: rgba(60, 207, 60, 0.705);
+        &:hover{
+            background-color: rgba(60, 207, 60, 1);
+        }
+        &:active{
+            background-color:  rgba(60, 207, 60, 0.5);
+        }
+    }
+    .btnDelete{
+        height: 40px;
+        background-color: rgba(228, 49, 49, 0.705);
+        &:hover{
+            background-color: rgba(228, 49, 49, 1);
+        }
+        &:active{
+            background-color:  rgba(228, 49, 49, 0.5);
+        }
+    }
+    #editRecipe{
+        height: 40px;
+        background-color: rgba(60, 136, 207, 0.705);
+        &:hover{
+            background-color: rgba(60, 136, 207, 1);
+        }
+        &:active{
+            background-color:  rgba(60, 136, 207, 0.5);
+        }
+    }
+    }
+}
+
+#ingredConteiner{
+    .ingredient{
+        display:flex;
+    }
+    p{
+        margin:0px;
+    }
+}
+
+.card{
+    border-radius: 20px 20px 0 20px;
+    -webkit-box-shadow: 25px 25px 25px -25px rgba(0,0,0,0.56);
+    -moz-box-shadow: 25px 25px 25px -25px rgba(0,0,0,0.56);
+    box-shadow: 25px 25px 25px -25px rgba(0,0,0,0.56);   
+    width: 100vw;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover{
+        -webkit-box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);
+        -moz-box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);
+        box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);   
+    }
+
+    .cardContent{
+        display:flex;
+        .firstContent{
+            min-width:40%;
+            max-width:40%;
+            border-left:2px solid rgba(0, 0, 0, 0.5); 
+            border-top:2px solid rgba(0, 0, 0, 0.5); 
+            border-right:2px solid rgba(0, 0, 0, 0.5);  
+        }
+        .secondContent{
+            min-width:60%;
+            max-width:60%;
+            border-top:2px solid rgba(0, 0, 0, 0.5);
+        }
+        .cardTitle{
+            font-weight: bolder;
+            font-size: 18px;
+            background-color: $colorCard2;
+            border-radius: 0 20px  0 0;
+        }
+        .addCategory{
+            background-color: $colorCard1;
+            border-radius:  20px 0 0 0;
+        }
+        .addDescription{
+            background-color: $colorCard3;  
+        }
+        .addIngrid{
+            border-radius:0 0 0 20px ;
+            background-color: $colorCard4;
+        }  
+    }
+}
+
+
+
+#searchMenu{
+    background-color: #f8f9fa;
+    text-align: center;
+    margin:0px;
+    color:rgba(0,0,0,.5);
+    button{
+        color:rgba(0,0,0,.5);
+        outline:0;
+        width:90%;
+        height: 30px;
+        background-color: $colorWindow;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+        &:hover{
+            background-color: $colorCard2;
+        }
+        &:active{
+            background-color: $colorCard1;
+        }      
+    }
+    input{
+        margin-bottom:8px;
+        background-color: rgb(255, 247, 238);
+        border: 2px solid rgba(0, 0, 0, 0.5);  
+    }
+    #btnAddSearchIng{
+        margin-top:8px;
+        margin-bottom:8px;
+        width: 226px;
+        height: 30px;
+    }
+}
+
+.addCategory::before {
+    content: "Kategoria: ";
+}
+.addDescription::before {
+    content: "Opis: ";
+}
