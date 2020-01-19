@@ -6,4 +6,4 @@ In the application you have the ability to create, read, update and delete recip
 All data is saved in the local storage of browser.
 
 ## Link to application
-[Live - Check yourself application](https://greg-p11.github.io/cookbook/)
+[Live - Cookbook application](https://greg-p11.github.io/cookbook/)
