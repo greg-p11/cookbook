@@ -20,7 +20,7 @@
          $("#btnSearchIngredients").prop('disabled', false);
          $("#btnSearchType").prop('disabled', false);
          $("#btnSearchName").prop('disabled', true);
-         $('#textToSearch').append("<input id='whatToSearch' type='text' name='searchRecipe' placeholder='Wpisz nazwę'/>");
+         $('#textToSearch').append("<input id='whatToSearch' type='text' name='searchRecipe' placeholder='Enter name'/>");
          
          $("#whatToSearch").keyup(function () {
              $('#catalog').text('');
@@ -48,7 +48,7 @@
          $("#btnSearchIngredients").prop('disabled', false);
          $("#btnSearchType").prop('disabled', true);
          $("#btnSearchName").prop('disabled', false);
-         $('#textToSearch').append("<input id='whatToSearch' type='text' name='searchRecipe' placeholder='Wpisz kategorię'/>");
+         $('#textToSearch').append("<input id='whatToSearch' type='text' name='searchRecipe' placeholder='Enter category'/>");
       
          $("#whatToSearch").keyup(function () {
              $('#catalog').text('');
@@ -77,7 +77,7 @@
          $("#btnSearchIngredients").prop('disabled', true);
          $("#btnSearchType").prop('disabled', false);
          $("#btnSearchName").prop('disabled', false);
-         $("#textToSearch").append("<div id='findedIngred'></div><input id='whatToSearch' type='text' name='searchRecipe' placeholder='Wpisz składnik'/><button id='btnAddSearchIng'>Kolejny składnika</button>");
+         $("#textToSearch").append("<div id='findedIngred'></div><input id='whatToSearch' type='text' name='searchRecipe' placeholder='Enter ingredient'/><button id='btnAddSearchIng'>Add next ingredient</button>");
          
          var arr =[];
  

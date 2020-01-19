@@ -34,6 +34,7 @@
   }
   #whatToSearch {
     width: 90%;
+    border-radius: 10px 10px 10px 10px !important;
   }
   #btnAddSearchIng {
     width: 90% !important;
@@ -43,6 +44,9 @@
   }
   .litleTitle {
     font-size: 17px !important;
+  }
+  #btnAddSearchIng {
+    border-radius: 10px 10px 10px 10px !important;
   }
 }
 
@@ -105,7 +109,7 @@
 }
 
 .blackWindow .addWindow .recipeTitle {
-  font-size: 38px;
+  font-size: 34px;
   text-align: center;
   font-weight: bolder;
 }
@@ -287,6 +291,7 @@
   height: 30px;
   background-color: #f0ebd4;
   border-radius: 10px;
+  border: none;
   -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 }
@@ -299,10 +304,17 @@
   background-color: rgba(168, 141, 106, 0.6);
 }
 
+#searchMenu #btnAddSearchIng {
+  border-radius: 0 10px 10px 0;
+}
+
 #searchMenu input {
   margin-bottom: 8px;
   background-color: #fff7ee;
   border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px 0 0 10px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 }
 
 #searchMenu #btnAddSearchIng {
@@ -313,16 +325,16 @@
 }
 
 .addCategory::before {
-  content: "Kategoria: ";
+  content: "Category: ";
 }
 
 .addDescription::before {
-  content: "Opis: ";
+  content: "Description: ";
 }
 
 body {
   background-color: rgba(172, 170, 170, 0.568);
-  font-family: cursive;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #525252;
 }

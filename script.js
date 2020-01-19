@@ -60,7 +60,7 @@ var ingreds =[];
 $("#btnIngred").click(function(){
     var ingredient = $("#ingredients").val();
     
-    $("#ingredConteiner").append("<div class='ingredient col-sm-6'><p class='ingred'>"+ingredient+"</p>"+"<button class='deleteIngred' type='button'>Usuń</button></div>");    
+    $("#ingredConteiner").append("<div class='ingredient col-sm-6'><p class='ingred'>"+ingredient+"</p>"+"<button class='deleteIngred' type='button'>Delete</button></div>");    
     $("#ingredients").val("");
     $(".deleteIngred").click(function(){
         $(this).closest('.ingredient').remove();
@@ -138,7 +138,7 @@ $(document).on('click', '.openRecipe', function(e){
         let l=0;
         while(l<recipies[j].ingredients.length)
         {
-            $("#ingredConteiner").append("<div id='"+l+"' class='ingredient col-sm-6'><p class='ingred'>"+recipies[j].ingredients[l]+"</p>"+"<button class='deleteIngred' type='button'>Usuń</button></div>");      
+            $("#ingredConteiner").append("<div id='"+l+"' class='ingredient col-sm-6'><p class='ingred'>"+recipies[j].ingredients[l]+"</p>"+"<button class='deleteIngred' type='button'>Delete</button></div>");      
             l++;
         }
         $(".deleteIngred").click(function(){
@@ -161,7 +161,7 @@ $(document).on('click', '.openRecipe', function(e){
             $("#name"+recipeId+"").html(recipies[j].name);
             $("#type"+recipeId+"").html(recipies[j].type);
             $("#description"+recipeId+"").html(recipies[j].description);
-            $("#ingredients"+recipeId+"").html("Składniki:<br>"+recipies[j].ingredients);
+            $("#ingredients"+recipeId+"").html("Ingredients:<br>"+recipies[j].ingredients);
             clearVal(); 
             localStorage.setItem("recipies", JSON.stringify(recipies));
         });
@@ -209,10 +209,9 @@ const cardCreate = (id, type, name, ingredients, description) =>{
             "<div id='name"+id+"' class='card-header secondContent cardTitle'>"+name+"</div>"+
         "</div>"+
             "<div class=' cardContent'>"+
-                "<div id='ingredients"+id+"' class='card-body firstContent addIngrid'><b>Składniki:</b><br>"+ingredients+"</div>"+
+                "<div id='ingredients"+id+"' class='card-body firstContent addIngrid'>Ingredients:<br>"+ingredients+"</div>"+
                 "<div id='description"+id+"' class='card-body secondContent addDescription'>"+description+"</div>"+
-            "</div>"+
-            
+            "</div>"+    
     "</div>");
 
 };

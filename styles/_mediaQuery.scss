@@ -1,5 +1,6 @@
 
 @media screen and (max-width: 767px) {
+   
     .windowInfo {
       font-size: 15px !important;
     }
@@ -34,6 +35,7 @@
     }
     #whatToSearch{
         width:90%;
+        border-radius:10px 10px 10px 10px !important;
     }
     #btnAddSearchIng{
         width:90% !important;
@@ -43,5 +45,8 @@
     }
     .litleTitle{
         font-size: 17px !important;
+    }
+    #btnAddSearchIng{
+        border-radius:10px 10px 10px 10px !important;
     }
 }
