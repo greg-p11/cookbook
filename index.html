@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"  content="Create your own cookbook">
 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -17,74 +19,73 @@
 
     <body>
         <header>
-            <div class="text-center">Twoja Książka kucharska</div>
+            <div class="text-center"></div>
             <nav class="navbar navbar-light bg-light navbar-expand-md ">
-                <a href="#" class="navbar-brand">CookBook</a>
+                <a href="#" id="brand" class="navbar-brand"><i class="fas fa-book-open"></i> CookBook</a>
                 <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#mainmenu"><span class="navbar-toggler-icon"></span></button>
                 <div class="navbar-collapse collapse " id="mainmenu">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><button id="btnInfo" class="nav-link">Informację o stronie</button></li>
-                        <li class="nav-item"><button id="btnSearchRecipe" class="nav-link">Szukaj przepisu</button></li>
-                        <li class="nav-item"><button id="addRecipe" class="nav-link">Dodaj przepis</button></li>
+                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnInfo" class="nav-link">Informacje o stronie</a></li>
+                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnSearchRecipe" class="nav-link">Szukaj przepisu</a></li>
+                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="addRecipe" class="nav-link">Dodaj przepis</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
+            
+            <div  class="row" id="searchMenu" hidden="true">             
+                <div class="col-sm-12 "> <hr> <b>Szukaj przepisu</b> </div>
+                <div class="col-sm-4 mt-2"><button id="btnSearchName">Nazwa</button></div>
+                <div class="col-sm-4 mt-2"><button id="btnSearchType">Kategoria</button></div>
+                <div class="col-sm-4 mt-2"><button id="btnSearchIngredients">Składniki</button></div>
+                <div class="col-sm-12 mt-3" id="textToSearch"></div>   
+            </div>
             <div class="container">
-                <div  class="row" id="searchMenu" hidden="true">                 
-                    <div class="col-sm-12">Szukaj przepisu</div>
-                    <div class="col-sm-4"><button id="btnSearchName">Nazwa</button></div>
-                    <div class="col-sm-4"><button id="btnSearchType">Typ</button></div>
-                    <div class="col-sm-4"><button id="btnSearchIngredients">Składniki</button></div>
-                    <div class="col-sm-12" id="textToSearch"></div>   
-                </div>
-                <div class="row" id="catalog">
-                </div>
+                <div class="row" id="catalog"></div>
             </div>
         </main>
 
         
-
+        <div class="blank" hidden="true">
+            <div class="windowInfo">Strona pozwala na stworzenie własnej książki kucharskiej.<br>Dodane przepisy w każdej chwili można edytować oraz usuwać.<br>W razie potrzeby istnieje możliwość wyszukiwania po nazwie, kategorii lub składnikach.<br> Wszystkie informacje zapisywane są w pamięci przeglądarki.</div>
+        </div>
 
         <div id="recipeAdding" class="blackWindow" hidden="true">
             <div class="addWindow">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 mt-3">
-                            <div>Nowy Przepis</div>
+                    <div class="row ">
+                        <div class="col-12 mt-1">
+                            <div class="recipeTitle underline">Nowy Przepis</div>
                         </div>
-                        <div class="col-12 mt-3">
-                            <label for="name">Nazwa</label>
-                            <input id="name" type="text" name="name"/>
+                        
+                        <div class="col-sm-4 pt-1 " ><label for="name">Nazwa:</label></div>
+                        <div class="col-sm-8 pt-1"><input id="name" type="text" name="name" placeholder="Wpisz nazwę"/></div>
+                        
+                        <div class="col-sm-4 pt-1"><label for="type">Kategoria:</label></div>
+                        <div class="col-sm-8 pt-1"><input id="type" type="text" name="type" placeholder="Wpisz kategorię"/></div>
+                        
+                        <div class="col-sm-12 pt-1"><label for="desc">Krótki opis:</label></div>
+                        <div class="col-sm-12 pt-1"><textarea id="desc" rows = "2" maxlength="100" name = "desc" style="resize: none;" placeholder="Wpisz krótki opis"></textarea></div>
+                        
+                        <div class="col-sm-4 pt-1"><label for="link">Link do przepisu:</label></div>
+                        <div class="col-sm-8 pt-1"><input id="recipeLink" type="text" name="link" placeholder="Podaj link do przepisu z internetu"/></div>
+
+                        <div class="col-sm-12 pt-1"><label for="text">Sposób przygotowania:</label></div>
+                        <div class="col-sm-12 pt-1"><textarea id="text" rows = "5" name = "description" style="resize: none;" placeholder="wpisz sposób przygotowania"></textarea></div>
+                    
+                        <div class="col-sm-4 pt-1"><label for="ingredients">Składniki:</label></div>
+                        <div class="col-sm-5 pt-1"><input id="ingredients" type="text" name="ingredients" placeholder="Wpisz składnik"/></div>
+                        <div class="col-sm-3 pt-1"><button id="btnIngred" type="button">Dodaj</button></div>
+     
+                        <div class="col-sm-12 mt-1">
+                            <div id="ingredConteiner" class="row"></div>  
                         </div>
-                        <div class="col-12">
-                            <label for="type">Typ</label>
-                            <input id="type" type="text" name="type"/>
-                        </div>
-                        <div class="col-12">
-                            <label for="desc">Krótki opis</label>
-                            <textarea id="desc" rows = "3" cols = "20" maxlength="50" name = "desc" style="resize: none;"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <label for="link">Link do przepisu</label>
-                            <input id="recipeLink" type="text" name="link"/>
-                        </div>
-                        <div class="col-12">
-                            <label for="text">Sposób przygotowania</label>
-                            <textarea id="text" rows = "5" cols = "50" name = "description" style="resize: none;"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <label for="ingredients">Składniki</label>
-                            <input id="ingredients" type="text" name="ingredients"/>
-                            <button id="btnIngred" type="button">Dodaj</button>
-                        </div>   
-                        <div id="ingredConteiner" class="col-12">
-                        </div>  
-                        <div  class="col-12">
-                            <button type="button" id="saveRecipe">Dodaj Przepis</button>
-                            <button type="button" id="saveEdit">Zapisz Zmiany</button>
-                            <button type="button" id="cancel" class="cancel">Anuluj</button>
+
+                        <div  class="btnHolder col-sm-12 mt-1">
+                            <button type="button" id="saveRecipe" class="btnAccept mt-2">Dodaj Przepis</button>
+                            <button type="button" id="saveEdit" class="btnAccept mt-2">Zapisz Zmiany</button>
+                            <button type="button" id="cancel" class="btnDelete cancel mt-2 mb-2 ">Anuluj</button>
                         </div>     
                     </div>
                 </div>
@@ -96,27 +97,32 @@
             <div class="addWindow">
                 <div class="container-fluid">
                     <div class="row">
+
                         <div class="col-sm-12 mt-3">
-                            <div id="nameOfRecipe"></div>
+                            <div id="nameOfRecipe" class="recipeTitle underline"></div>
                         </div>
-                        <div class="col-sm-3">
-                            <div id="typeOfRecipe"></div>
+
+                        <div class="col-sm-3 mt-2">
+                            <div id="typeOfRecipe" class="underline litleTitle"></div>
                         </div>
-                        <div class="col-sm-9">
-                            <div ><a id="linkToRecipe">Link do przepisu</a></div>
-                        </div>   
-                        <div class="col-sm-3">
+
+                        <div class="col-sm-9 mt-2">
+                            <div class="underline litleTitle"><a id="linkToRecipe" target="_blank" rel="noopener noreferrer">Link do przepisu</a></div>
+                        </div>  
+
+                        <div class="col-sm-3 mt-3" ><b>Składniki:</b><hr> 
                             <div id="ingrediantsOfRecipe"></div>
                         </div>
-                        <div class="col-sm-9">
+
+                        <div class="col-sm-9 mt-3"><b>Przepis:</b><hr>
                             <div id="textOfRecipe"></div>
                         </div>
-                        <div class="col-sm-12">
-                            <button type="button" id="editRecipe">Edytuj</button>
-                            <button type="button" id="deleteRecipe">Usuń</button>
-                            <button type="button" id="back" class="cancel">Cofnij</button>
+                        
+                        <div class="col-sm-4"><button type="button" id="editRecipe" class=" mt-2 mb-3">Edytuj</button></div>
+                        <div class="col-sm-4"><button type="button" id="deleteRecipe" class="btnDelete mt-2 mb-3">Usuń</button></div>
+                        <div class="col-sm-4"><button type="button" id="back" class="btnAccept cancel mt-2 mb-3">Cofnij</button></div>
                             
-                        </div>     
+                            
                     </div>
                 </div>
             </div>
@@ -124,4 +130,6 @@
 
     </body>
     <script src="script.js"></script>
+    <!-- <script src="searchFunction.js"></script>
+    <script src="windowWithRecipe.js"></script> -->
 </html>
