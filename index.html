@@ -25,17 +25,17 @@
                 <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#mainmenu"><span class="navbar-toggler-icon"></span></button>
                 <div class="navbar-collapse collapse " id="mainmenu">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnInfo" class="nav-link">Informacje o stronie</a></li>
-                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnSearchRecipe" class="nav-link">Szukaj przepisu</a></li>
-                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="addRecipe" class="nav-link">Dodaj przepis</a></li>
+                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnInfo" class="nav-link">About the site</a></li>
+                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnSearchRecipe" class="nav-link">Search</a></li>
+                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="addRecipe" class="nav-link">Add recipe</a></li>
                     </ul>
                 </div>
             </nav>
             <div  class="row" id="searchMenu" hidden="true">             
-                <div class="col-sm-12 "> <hr> <b>Szukaj przepisu</b> </div>
-                <div class="col-sm-4 mt-2"><button id="btnSearchName">Nazwa</button></div>
-                <div class="col-sm-4 mt-2"><button id="btnSearchType">Kategoria</button></div>
-                <div class="col-sm-4 mt-2"><button id="btnSearchIngredients">Składniki</button></div>
+                <div class="col-sm-12 "> <hr> <b>Search for a recipe with</b> </div>
+                <div class="col-sm-4 mt-2"><button id="btnSearchName">Name</button></div>
+                <div class="col-sm-4 mt-2"><button id="btnSearchType">Category</button></div>
+                <div class="col-sm-4 mt-2"><button id="btnSearchIngredients">Ingredients</button></div>
                 <div class="col-sm-12 mt-3" id="textToSearch"></div>   
             </div>
         </header>
@@ -44,47 +44,46 @@
                 <div class="row" id="catalog"></div>
             </div>
         </main>
-
         
         <div class="blackWindow blank" hidden="true">
-            <div class="windowInfo ">Strona pozwala na stworzenie własnej książki kucharskiej.<br>Dodane przepisy można edytować oraz usuwać.<br>W razie potrzeby istnieje możliwość wyszukania przepisu po nazwie, kategorii lub składnikach.<br> Wszystkie informacje zapisywane są w lokalnej pamięci przeglądarki.</div>
+            <div class="windowInfo ">This site allows you to create your own cookbook.<br>Added recipes can be edited and deleted.<br>If necessary, you can search for a recipe by name, category or ingredients.<br>All information is saved in the browser's local storage.</div>
         </div>
 
         <div id="recipeAdding" class="blackWindow" hidden="true">
             <div class="addWindow">
                 <div class="container-fluid">
                     <div class="row ">
-                        <div class="col-12 mt-1">
-                            <div class="recipeTitle underline">Nowy Przepis</div>
+                        <div class="col-12">
+                            <div class="recipeTitle underline">New Recipe</div>
                         </div>
                         
-                        <div class="col-sm-4 pt-1 " ><label for="name">Nazwa:</label></div>
-                        <div class="col-sm-8 pt-1"><input id="name" type="text" name="name" placeholder="Wpisz nazwę"/></div>
+                        <div class="col-sm-4 pt-1 " ><label for="name">Name:</label></div>
+                        <div class="col-sm-8 pt-1"><input id="name" type="text" name="name" placeholder="Enter name"/></div>
                         
-                        <div class="col-sm-4 pt-1"><label for="type">Kategoria:</label></div>
-                        <div class="col-sm-8 pt-1"><input id="type" type="text" name="type" placeholder="Wpisz kategorię"/></div>
+                        <div class="col-sm-4 pt-1"><label for="type">Category:</label></div>
+                        <div class="col-sm-8 pt-1"><input id="type" type="text" name="type" placeholder="Enter category"/></div>
                         
-                        <div class="col-sm-12 pt-1"><label for="desc">Krótki opis:</label></div>
-                        <div class="col-sm-12 pt-1"><textarea id="desc" rows = "2" maxlength="100" name = "desc" style="resize: none;" placeholder="Wpisz krótki opis"></textarea></div>
+                        <div class="col-sm-12 pt-1"><label for="desc">Short description:</label></div>
+                        <div class="col-sm-12 pt-1"><textarea id="desc" rows = "2" maxlength="100" name = "desc" style="resize: none;" placeholder="Enter short description"></textarea></div>
                         
-                        <div class="col-sm-4 pt-1"><label for="link">Link do przepisu:</label></div>
-                        <div class="col-sm-8 pt-1"><input id="recipeLink" type="text" name="link" placeholder="Podaj link do przepisu z internetu"/></div>
+                        <div class="col-sm-4 pt-1"><label for="link">Link to the recipe:</label></div>
+                        <div class="col-sm-8 pt-1"><input id="recipeLink" type="text" name="link" placeholder="Enter recipe link from the Internet"/></div>
 
-                        <div class="col-sm-12 pt-1"><label for="text">Sposób przygotowania:</label></div>
-                        <div class="col-sm-12 pt-1"><textarea id="text" rows = "5" name = "description" style="resize: none;" placeholder="wpisz sposób przygotowania"></textarea></div>
+                        <div class="col-sm-12 pt-1"><label for="text">How to prepare:</label></div>
+                        <div class="col-sm-12 pt-1"><textarea id="text" rows = "5" name = "description" style="resize: none;" placeholder="Enter recipe"></textarea></div>
                     
-                        <div class="col-sm-4 pt-1"><label for="ingredients">Składniki:</label></div>
-                        <div class="col-sm-5 pt-1"><input id="ingredients" type="text" name="ingredients" placeholder="Wpisz składnik"/></div>
-                        <div class="col-sm-3 pt-1"><button id="btnIngred" type="button">Dodaj</button></div>
+                        <div class="col-sm-4 pt-1"><label for="ingredients">Ingredients:</label></div>
+                        <div class="col-sm-5 pt-1"><input id="ingredients" type="text" name="ingredients" placeholder="Enter ingredient"/></div>
+                        <div class="col-sm-3 pt-1"><button id="btnIngred" type="button">Add</button></div>
      
                         <div class="col-sm-12 mt-1">
                             <div id="ingredConteiner" class="row"></div>  
                         </div>
 
                         <div  class="btnHolder col-sm-12 mt-1">
-                            <button type="button" id="saveRecipe" class="btnAccept mt-2">Dodaj Przepis</button>
-                            <button type="button" id="saveEdit" class="btnAccept mt-2">Zapisz Zmiany</button>
-                            <button type="button" id="cancel" class="btnDelete cancel mt-2 mb-2 ">Anuluj</button>
+                            <button type="button" id="saveRecipe" class="btnAccept mt-2">Add Recipe</button>
+                            <button type="button" id="saveEdit" class="btnAccept mt-2">Save Changes</button>
+                            <button type="button" id="cancel" class="btnDelete cancel mt-2 mb-2 ">Cancel</button>
                         </div>     
                     </div>
                 </div>
@@ -104,20 +103,20 @@
                         </div>
 
                         <div class="col-sm-9 mt-2">
-                            <div class="underline litleTitle"><a id="linkToRecipe" target="_blank" rel="noopener noreferrer">Link do przepisu</a></div>
+                            <div class="underline litleTitle"><a id="linkToRecipe" target="_blank" rel="noopener noreferrer">Link to the recipe</a></div>
                         </div>  
 
-                        <div class="col-sm-3 mt-3" ><b>Składniki:</b><hr> 
+                        <div class="col-sm-3 mt-3" ><b>Ingredients:</b><hr> 
                             <div id="ingrediantsOfRecipe"></div>
                         </div>
 
-                        <div class="col-sm-9 mt-3"><b>Przepis:</b><hr>
+                        <div class="col-sm-9 mt-3"><b>Recipe:</b><hr>
                             <div id="textOfRecipe"></div>
                         </div>
                         
-                        <div class="col-sm-4"><button type="button" id="editRecipe" class=" mt-2 mb-3">Edytuj</button></div>
-                        <div class="col-sm-4"><button type="button" id="deleteRecipe" class="btnDelete mt-2 mb-3">Usuń</button></div>
-                        <div class="col-sm-4"><button type="button" id="back" class="btnAccept cancel mt-2 mb-3">Cofnij</button></div>    
+                        <div class="col-sm-4"><button type="button" id="editRecipe" class=" mt-2 mb-3">Edit</button></div>
+                        <div class="col-sm-4"><button type="button" id="deleteRecipe" class="btnDelete mt-2 mb-3">Delete</button></div>
+                        <div class="col-sm-4"><button type="button" id="back" class="btnAccept cancel mt-2 mb-3">Back</button></div>    
                     </div>
                 </div>
             </div>
