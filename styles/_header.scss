@@ -8,6 +8,12 @@
             opacity: 0.5;
         }
     }
+    #DeleteRecipes{
+        &:hover{
+            background-color: red;
+            opacity: 0.8;
+        }
+    }
 }
 
 .windowInfo{
@@ -28,4 +34,17 @@
     -webkit-box-shadow: 25px 25px 25px -25px snow;
     -moz-box-shadow: 25px 25px 25px -25px snow;
     box-shadow: 25px 25px 25px -25px snow;
+}
+.redWindow{
+    position: fixed;
+    left:0px;
+    top:0px;
+    width:100vw;
+    height: 100vh;
+    background-color: rgba(199, 61, 61, 0.6); 
+    z-index: 10; 
+    .windowInfo{
+        background-color: rgb(80, 5, 5);
+        color:snow;
+    }
 }

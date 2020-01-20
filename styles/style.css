@@ -55,6 +55,11 @@
   opacity: 0.5;
 }
 
+#mainmenu #DeleteRecipes:hover {
+  background-color: red;
+  opacity: 0.8;
+}
+
 .windowInfo {
   padding: 20px;
   height: 60vh;
@@ -78,6 +83,21 @@
   border: 3px solid snow;
   -webkit-box-shadow: 25px 25px 25px -25px snow;
   box-shadow: 25px 25px 25px -25px snow;
+}
+
+.redWindow {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(199, 61, 61, 0.6);
+  z-index: 10;
+}
+
+.redWindow .windowInfo {
+  background-color: #500505;
+  color: snow;
 }
 
 .blackWindow {
@@ -125,13 +145,6 @@
   background-color: #fff7ee;
 }
 
-.blackWindow .addWindow button {
-  border: none;
-  width: 100%;
-  border-radius: 20px;
-  outline: 0;
-}
-
 .blackWindow .addWindow .ingredient {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,72 +153,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 2px;
-}
-
-.blackWindow .addWindow .deleteIngred {
-  height: 30px;
-  background-color: rgba(207, 60, 72, 0.705);
-  width: 50%;
-}
-
-.blackWindow .addWindow .deleteIngred:hover {
-  background-color: #cf3c48;
-}
-
-.blackWindow .addWindow .deleteIngred:active {
-  background-color: rgba(207, 60, 72, 0.5);
-}
-
-.blackWindow .addWindow #btnIngred {
-  height: 30px;
-  background-color: rgba(60, 136, 207, 0.705);
-}
-
-.blackWindow .addWindow #btnIngred:hover {
-  background-color: #3c88cf;
-}
-
-.blackWindow .addWindow #btnIngred:active {
-  background-color: rgba(60, 136, 207, 0.5);
-}
-
-.blackWindow .addWindow .btnAccept {
-  height: 40px;
-  background-color: rgba(60, 207, 60, 0.705);
-}
-
-.blackWindow .addWindow .btnAccept:hover {
-  background-color: #3ccf3c;
-}
-
-.blackWindow .addWindow .btnAccept:active {
-  background-color: rgba(60, 207, 60, 0.5);
-}
-
-.blackWindow .addWindow .btnDelete {
-  height: 40px;
-  background-color: rgba(228, 49, 49, 0.705);
-}
-
-.blackWindow .addWindow .btnDelete:hover {
-  background-color: #e43131;
-}
-
-.blackWindow .addWindow .btnDelete:active {
-  background-color: rgba(228, 49, 49, 0.5);
-}
-
-.blackWindow .addWindow #editRecipe {
-  height: 40px;
-  background-color: rgba(60, 136, 207, 0.705);
-}
-
-.blackWindow .addWindow #editRecipe:hover {
-  background-color: #3c88cf;
-}
-
-.blackWindow .addWindow #editRecipe:active {
-  background-color: rgba(60, 136, 207, 0.5);
 }
 
 #ingredConteiner .ingredient {
@@ -290,6 +237,103 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+#searchMenu input {
+  margin-bottom: 8px;
+  background-color: #fff7ee;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.addCategory::before {
+  content: "Category: ";
+}
+
+.addDescription::before {
+  content: "Description: ";
+}
+
+main button {
+  border: none;
+  width: 100%;
+  border-radius: 20px;
+  outline: 0;
+}
+
+.deleteIngred {
+  height: 30px;
+  background-color: rgba(207, 60, 72, 0.705);
+  width: 50%;
+}
+
+.deleteIngred:hover {
+  background-color: #cf3c48;
+}
+
+.deleteIngred:active {
+  background-color: rgba(207, 60, 72, 0.5);
+}
+
+#btnIngred {
+  height: 30px;
+  background-color: rgba(60, 136, 207, 0.705);
+}
+
+#btnIngred:hover {
+  background-color: #3c88cf;
+}
+
+#btnIngred:active {
+  background-color: rgba(60, 136, 207, 0.5);
+}
+
+.btnAccept {
+  height: 40px;
+  background-color: rgba(60, 207, 60, 0.705);
+}
+
+.btnAccept:hover {
+  background-color: #3ccf3c;
+}
+
+.btnAccept:active {
+  background-color: rgba(60, 207, 60, 0.5);
+}
+
+.btnDelete {
+  height: 40px;
+  background-color: rgba(228, 49, 49, 0.705);
+}
+
+.btnDelete:hover {
+  background-color: #e43131;
+}
+
+.btnDelete:active {
+  background-color: rgba(228, 49, 49, 0.5);
+}
+
+#editRecipe {
+  height: 40px;
+  background-color: rgba(60, 136, 207, 0.705);
+}
+
+#editRecipe:hover {
+  background-color: #3c88cf;
+}
+
+#editRecipe:active {
+  background-color: rgba(60, 136, 207, 0.5);
+}
+
+#btnDeleteAll {
+  height: 50px;
+  width: 70%;
+  color: snow;
+  border: 1px solid snow;
+}
+
 #searchMenu button {
   color: rgba(0, 0, 0, 0.5);
   outline: 0;
@@ -310,28 +354,11 @@
   background-color: rgba(168, 141, 106, 0.7);
 }
 
-#searchMenu input {
-  margin-bottom: 8px;
-  background-color: #fff7ee;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 10px 10px 10px 10px;
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-}
-
 #searchMenu #btnAddSearchIng {
   margin-top: 8px;
   margin-bottom: 8px;
   width: 226px;
   height: 30px;
-}
-
-.addCategory::before {
-  content: "Category: ";
-}
-
-.addDescription::before {
-  content: "Description: ";
 }
 
 body {

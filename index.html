@@ -26,8 +26,9 @@
                 <div class="navbar-collapse collapse " id="mainmenu">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnInfo" class="nav-link">About the site</a></li>
-                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnSearchRecipe" class="nav-link">Search</a></li>
                         <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="addRecipe" class="nav-link">Add recipe</a></li>
+                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="btnSearchRecipe" class="nav-link">Search</a></li>
+                        <li class="nav-item mr-3 ml-3 centerText"><a href="#" id="DeleteRecipes" class="nav-link">Delete recipes</a></li>
                     </ul>
                 </div>
             </nav>
@@ -43,12 +44,22 @@
             <div class="container">
                 <div class="row" id="catalog"></div>
             </div>
-        </main>
+            
+      
         
         <div class="blackWindow blank" hidden="true">
             <div class="windowInfo ">This site allows you to create your own cookbook.<br>Added recipes can be edited and deleted.<br>If necessary, you can search for a recipe by name, category or ingredients.<br>All information is saved in the browser's local storage.</div>
         </div>
 
+        <div>
+            <div id="clearLocalStorage" class="redWindow blankDelete" hidden="true">
+                <div class="row windowInfo ">
+                    <div class="col-sm-12">Are you sure you want to delete all recipes?<br>Pressing the "Yes" butto will remove the recipes from the local storage of the browser.<br>Click anywhere else to go back.</div>
+                    <div class="col-sm-12"><button id="btnDeleteAll" class="btnDelete">YES</button></div>
+                </div>
+               
+            </div>
+        </div>
         <div id="recipeAdding" class="blackWindow" hidden="true">
             <div class="addWindow">
                 <div class="container-fluid">
@@ -121,6 +132,8 @@
                 </div>
             </div>
         </div>
+
+    </main>
 
     </body>
     <script src="js/script.js"></script>

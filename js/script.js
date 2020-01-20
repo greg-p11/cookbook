@@ -192,13 +192,25 @@ $("#btnInfo").click(function(){
 $(".blank").click(function(){
     $(".blank").attr("hidden",true);
 });
+$(".blankDelete").click(function(){
+    $(".blankDelete").attr("hidden",true);
+});
 
 $("#addRecipe").click(function(){
     $("#recipeAdding").attr("hidden",false);
     $("#saveRecipe").attr("hidden", false);
     $("#saveEdit").attr("hidden", true);
 });
- 
+$("#DeleteRecipes").click(function(){
+    $(".blankDelete").attr("hidden",false);
+    $("#clearLocalStorage").attr("hidden",false);
+    $("#btnDeleteAll").click(function(){
+        localStorage.removeItem("recipies");
+        location.reload();
+    });
+}); 
+
+
 //-----------------------------------------------------------------------------------------------
 //function to creating cards
 const cardCreate = (id, type, name, ingredients, description) =>{
