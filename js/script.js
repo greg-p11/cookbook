@@ -94,10 +94,12 @@ $("#saveRecipe").click(function(){
 
 //-----------------------------------------------------------------------------------------------
 //function to open window with recipe
-
-// $(document).on('click', '.openRecipe', function(e){
 $(document).on('click touchstart', '.openRecipe', function() {
-    // e.preventDefault();
+    alert("aasdasdasd");
+});
+// $(document).on('click', '.openRecipe', function(e){
+$(document).on('click touchstart', '.openRecipe', function(e) {
+    e.preventDefault();
     var recipeId = $(this).attr("recipe-id"); 
     let u=0; 
     let search =0;
