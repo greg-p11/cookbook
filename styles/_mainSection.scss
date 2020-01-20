@@ -113,7 +113,7 @@
     }
 }
 
-.card{
+.openRecipe{
     border-radius: 20px 20px 0 20px;
     -webkit-box-shadow: 25px 25px 25px -25px rgba(0,0,0,0.56);
     -moz-box-shadow: 25px 25px 25px -25px rgba(0,0,0,0.56);
@@ -133,13 +133,14 @@
             min-width:40%;
             max-width:40%;
             border-left:2px solid rgba(0, 0, 0, 0.5); 
-            border-top:2px solid rgba(0, 0, 0, 0.5); 
-            border-right:2px solid rgba(0, 0, 0, 0.5);  
+            border-right:2px solid $mainBackgroundColor;  
+            
         }
         .secondContent{
             min-width:60%;
             max-width:60%;
-            border-top:2px solid rgba(0, 0, 0, 0.5);
+            border-top:2px solid $mainBackgroundColor;
+            border-left:2px solid $mainBackgroundColor; 
         }
         .cardTitle{
             font-weight: bolder;
