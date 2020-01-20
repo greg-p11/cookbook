@@ -120,11 +120,20 @@
     box-shadow: 25px 25px 25px -25px rgba(0,0,0,0.56);   
     width: 100vw;
     margin-top: 20px;
-    cursor: pointer;
+    color:rgb(82, 82, 82);
+    text-decoration: none;
     &:hover{
         -webkit-box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);
         -moz-box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);
         box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);   
+        color:rgb(82, 82, 82);
+        text-decoration: none;
+    }
+    &:active{
+        opacity:0.6;
+        -webkit-box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);
+        -moz-box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);
+        box-shadow: 0px 1px 10px 10px rgba(255,255,255,0.96);     
     }
 
     .cardContent{
@@ -134,12 +143,10 @@
             max-width:40%;
             border-left:2px solid rgba(0, 0, 0, 0.5); 
             border-right:2px solid $mainBackgroundColor;  
-            
         }
         .secondContent{
             min-width:60%;
             max-width:60%;
-            border-top:2px solid $mainBackgroundColor;
             border-left:2px solid $mainBackgroundColor; 
         }
         .cardTitle{
@@ -154,10 +161,12 @@
         }
         .addDescription{
             background-color: $colorCard3;  
+            border-top:4px solid $mainBackgroundColor;
         }
         .addIngrid{
             border-radius:0 0 0 20px ;
             background-color: $colorCard4;
+            border-top:4px solid $mainBackgroundColor;
         }  
     }
 }
