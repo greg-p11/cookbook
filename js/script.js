@@ -203,7 +203,7 @@ $("#addRecipe").click(function(){
 //function to creating cards
 const cardCreate = (id, type, name, ingredients, description) =>{
     $("#catalog").append(
-        "<div id='"+id+"'  class='card openRecipe' recipe-id='"+id+"'>"+
+        "<a href='#' id='"+id+"'  class='card openRecipe' recipe-id='"+id+"'>"+
         "<div class='cardContent'>"+
             "<div id='type"+id+"' class='card-header firstContent addCategory '>"+type+"</div>"+
             "<div id='name"+id+"' class='card-header secondContent cardTitle'>"+name+"</div>"+
@@ -212,7 +212,7 @@ const cardCreate = (id, type, name, ingredients, description) =>{
                 "<div id='ingredients"+id+"' class='card-body firstContent addIngrid'>Ingredients:<br>"+ingredients+"</div>"+
                 "<div id='description"+id+"' class='card-body secondContent addDescription'>"+description+"</div>"+
             "</div>"+    
-    "</div>");
+    "</a>");
 
 };
 //-----------------------------------------------------------------------------------------------
