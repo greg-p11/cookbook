@@ -68,6 +68,7 @@ $("#btnIngred").click(function(){
 });
 
 $("#saveRecipe").click(function(){
+
     var id = i;
     var name = $("#name").val();
     var type = $("#type").val();
@@ -75,13 +76,44 @@ $("#saveRecipe").click(function(){
     var description = $("#desc").val();
     var text = $("#text").val();
 
+    if(link!=0)
+    {
+        let tempLink = link.substring(0, 8);
+        let checkTempLink = "https://";
+        if(tempLink!=checkTempLink)
+        {
+            link = checkTempLink.concat(link);
+        }
+    }
+
+    if(name==0 && type==0)
+    {
+        $("#name").attr("placeholder", "You didn't enter a name");
+        $("#name").css({"color" : "rgb(255,0,0)"});
+        $("#type").attr("placeholder", "You didn't enter a category");
+        $("#type").css({"color" : "rgb(255,0,0)"});
+        $(".addWindow").scrollTop(0);
+    }
+    else if(name==0)
+    {
+        $("#name").attr("placeholder", "Nie podałeś nazwy");
+        $("#name").css({"color" : "rgb(255,0,0)"});
+        $(".addWindow").scrollTop(0);
+    }
+    else if(type==0)
+    {
+        $("#type").attr("placeholder", "Nie podałeś nazwy");
+        $("#type").css({"color" : "rgb(255,0,0)"});
+        $(".addWindow").scrollTop(0);
+    }
+    else{
     $(".ingred").each(function(){
         ingreds.push($(this).closest('p').html());
     });
     
     var ingredients = ingreds;
     i=i+1;
-
+    
     var recipe = new Recipe(id, name, type, link, description, text, ingredients);
     recipies.push(recipe);
     
@@ -90,6 +122,7 @@ $("#saveRecipe").click(function(){
     ingreds = [];
     clearVal(); 
     cardCreate(id, type, name, ingredients, description);
+    }
 });
 
 //-----------------------------------------------------------------------------------------------
@@ -113,6 +146,7 @@ $(document).on('click', '.openRecipe', function() {
         $("#nameOfRecipe").text(recipies[j].name);
         $("#typeOfRecipe").text(recipies[j].type);
         $("#linkToRecipe").attr("href", recipies[j].link);
+        $("#linkToRecipe").attr("title", recipies[j].link);
         $('.ingredient').remove();
         let k=0;
         while(k<recipies[j].ingredients.length)
@@ -122,6 +156,8 @@ $(document).on('click', '.openRecipe', function() {
         }
         $("#textOfRecipe").text(recipies[j].text);
     } 
+    $(".addWindow").scrollTop(0);
+
     $("#editRecipe").click(function(e){
         e.preventDefault();
         $(".blackWindow").attr("hidden",true);
@@ -134,7 +170,7 @@ $(document).on('click', '.openRecipe', function() {
         $("#desc").val(recipies[j].description);
         $("#text").val(recipies[j].text);
         $('.ingredient').remove();
-
+        $(".addWindow").scrollTop(0);
         let l=0;
         while(l<recipies[j].ingredients.length)
         {
@@ -200,6 +236,7 @@ $("#addRecipe").click(function(){
     $("#recipeAdding").attr("hidden",false);
     $("#saveRecipe").attr("hidden", false);
     $("#saveEdit").attr("hidden", true);
+    $(".addWindow").scrollTop(0);
 });
 $("#DeleteRecipes").click(function(){
     $(".blankDelete").attr("hidden",false);
@@ -238,6 +275,12 @@ const clearVal =() =>{
     $("#text").val("");
     $("#ingredients").val("");
     $(".ingredient").remove();
+
+    $("#name").attr("placeholder", "Enter name");
+    $("#type").attr("placeholder", "Enter category");
+    $("#name").css({"color" : "#525252"});
+    $("#type").css({"color" : "#525252"});
+    
 };
 
 

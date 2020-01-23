@@ -17,7 +17,7 @@
         -moz-box-shadow: 25px 25px 25px -25px snow;
         box-shadow: 25px 25px 25px -25px snow;
 
-        border-radius: 25px 0 0 25px;
+        border-radius: 15px;
         border-left: 3px solid snow;  
         border-top: 3px solid snow; 
          
@@ -121,6 +121,7 @@
     margin:0px;
     color:rgba(0,0,0,.5);
     input{
+        width: 33%;
         margin-bottom:8px;
         background-color: rgb(255, 247, 238);
         border: 2px solid rgba(0, 0, 0, 0.5);  
