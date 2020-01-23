@@ -19,10 +19,18 @@
         font-size: 20px !important;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px), screen and (max-height: 400px) {
     .windowInfo {
+        top: 0vh !important;
+        left: 0vw !important;
         font-size: 12px !important;
+        height: 80% !important;
+        width: 80% !important;
+        top: 10% !important;
+        left: 10% !important;
+        border-radius: 15px !important;
       }
+    
     .card{
         font-size: 10px;
         .cardTitle{
@@ -31,9 +39,10 @@
     }
     .addWindow{
         font-size: 10px;
+        border-radius: 5px !important;
     }
     #whatToSearch{
-        width:90%;
+        width:90% !important;
     }
     #btnAddSearchIng{
         width:90% !important;

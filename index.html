@@ -51,15 +51,15 @@
             <div class="windowInfo ">This site allows you to create your own cookbook.<br>Added recipes can be edited and deleted.<br>If necessary, you can search for a recipe by name, category or ingredients.<br>All information is saved in the browser's local storage.</div>
         </div>
 
-        <div>
+        
             <div id="clearLocalStorage" class="redWindow blankDelete" hidden="true">
                 <div class="row windowInfo ">
-                    <div class="col-sm-12">Are you sure you want to delete all recipes?<br>Pressing the "Yes" butto will remove the recipes from the local storage of the browser.<br>Click anywhere else to go back.</div>
+                    <div class="col-sm-12">Are you sure you want to delete all recipes?<br>Pressing the "Yes" button will remove the recipes from the local storage of the browser.<br>Click anywhere else to go back.</div>
                     <div class="col-sm-12"><button id="btnDeleteAll" class="btnDelete">YES</button></div>
                 </div>
                
             </div>
-        </div>
+        
         <div id="recipeAdding" class="blackWindow" hidden="true">
             <div class="addWindow">
                 <div class="container-fluid">
@@ -68,10 +68,10 @@
                             <div class="recipeTitle underline">New Recipe</div>
                         </div>
                         
-                        <div class="col-sm-4 pt-1 " ><label for="name">Name:</label></div>
+                        <div class="col-sm-4 pt-1 " ><label for="name">Name*:</label></div>
                         <div class="col-sm-8 pt-1"><input id="name" type="text" name="name" placeholder="Enter name"/></div>
                         
-                        <div class="col-sm-4 pt-1"><label for="type">Category:</label></div>
+                        <div class="col-sm-4 pt-1"><label for="type">Category*:</label></div>
                         <div class="col-sm-8 pt-1"><input id="type" type="text" name="type" placeholder="Enter category"/></div>
                         
                         <div class="col-sm-12 pt-1"><label for="desc">Short description:</label></div>
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="col-sm-9 mt-2">
-                            <div class="underline litleTitle"><a id="linkToRecipe" target="_blank" rel="noopener noreferrer">Link to the recipe</a></div>
+                            <div class="underline litleTitle"><a id="linkToRecipe" target="_blank" rel="noopener noreferrer" >Go to recipe website</a></div>
                         </div>  
 
                         <div class="col-sm-3 mt-3" ><b>Ingredients:</b><hr> 
